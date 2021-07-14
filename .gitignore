@@ -1,7 +1,2 @@
 */.DS_Store
-database*/
-*.csv
-cache/
 */__pycache__
-test/
-*.profile
