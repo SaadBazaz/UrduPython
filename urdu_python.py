@@ -23,7 +23,9 @@ language_dict = {
     "توڑ":        "break",
     "جاری":       "continue",
     "گزر":        "pass",
-
+    "حق":         "True",
+    "باطل":       "False",
+    "ہے":         "is",
 }
 
 words = ur_pyfile.read()
