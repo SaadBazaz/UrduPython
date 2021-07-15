@@ -35,6 +35,9 @@ The mappings are as following:
     "وضح":        "def",
     "ابتدا":      "init",
     "خود":        "self",
+    "واپس":       "return",
+    "ستلی":       "string",
+    "ستل":        "str",
 ```
 
 2. Translate and run the code in one command: ```python urdu_python.py```

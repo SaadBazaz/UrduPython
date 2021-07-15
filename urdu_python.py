@@ -31,6 +31,9 @@ language_dict = {
     "وضح":        "def",
     "ابتدا":      "init",
     "خود":        "self",
+    "واپس":       "return",
+    "ستلی":       "string",
+    "ستل":        "str",    
 }
 
 words = ur_pyfile.read()
