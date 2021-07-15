@@ -27,6 +27,9 @@ The mappings are as following:
     "توڑ":        "break",
     "جاری":       "continue",
     "گزر":        "pass",
+    "حق":         "True",
+    "باطل":       "False",
+    "ہے":         "is",
 ```
 
 2. Translate and run the code in one command: ```python urdu_python.py```
