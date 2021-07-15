@@ -5,6 +5,7 @@ Write simple Python in Urdu.
 1. Write Urdu code in ```سامپل۔پے```
 The mappings are as following:
 ```
+    "۔":          ".",
     "،":          ",",
     "۱":          "1",
     "۲":          "2",
@@ -30,6 +31,10 @@ The mappings are as following:
     "حق":         "True",
     "باطل":       "False",
     "ہے":         "is",
+    "طبقه":       "class",
+    "وضح":        "def",
+    "ابتدا":      "init",
+    "خود":        "self",
 ```
 
 2. Translate and run the code in one command: ```python urdu_python.py```

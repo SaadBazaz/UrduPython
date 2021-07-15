@@ -1,6 +1,7 @@
 ur_pyfile = open("سامپل۔پے")
 
 language_dict = {
+    "۔":          ".",
     "،":          ",",
     "۱":          "1",
     "۲":          "2",
@@ -26,6 +27,10 @@ language_dict = {
     "حق":         "True",
     "باطل":       "False",
     "ہے":         "is",
+    "طبقه":       "class",
+    "وضح":        "def",
+    "ابتدا":      "init",
+    "خود":        "self",
 }
 
 words = ur_pyfile.read()
