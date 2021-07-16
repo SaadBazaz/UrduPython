@@ -20,7 +20,7 @@ language_dict = {
     "جبتک":       "while",
     "جو":         "for",
     "اندر":       "in", 
-    "داخله":      "input",
+    "داخلہ":      "input",
     "توڑ":        "break",
     "جاری":       "continue",
     "گزر":        "pass",
@@ -40,6 +40,7 @@ language_dict = {
     "یا":         "or",    
     "سب":         "all",
     "کوئ":        "any",
+    "ندارد":      "None",    
 }
 
 words = ur_pyfile.read()

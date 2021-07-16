@@ -44,6 +44,7 @@ The mappings are as following:
     "یا":         "or",    
     "سب":         "all",
     "کوئ":        "any",
+    "ندارد":      "None",
 ```
 
 2. Translate and run the code in one command: ```python urdu_python.py```
