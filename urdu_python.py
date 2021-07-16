@@ -33,7 +33,13 @@ language_dict = {
     "خود":        "self",
     "واپس":       "return",
     "ستلی":       "string",
-    "ستل":        "str",    
+    "ستل":        "str",
+    "شامل":       "append",
+    "نکل":        "pop",
+    "اور":        "and",
+    "یا":         "or",    
+    "سب":         "all",
+    "کوئ":        "any",
 }
 
 words = ur_pyfile.read()

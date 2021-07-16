@@ -38,6 +38,12 @@ The mappings are as following:
     "واپس":       "return",
     "ستلی":       "string",
     "ستل":        "str",
+    "شامل":       "append",
+    "نکل":        "pop",
+    "اور":        "and",
+    "یا":         "or",    
+    "سب":         "all",
+    "کوئ":        "any",
 ```
 
 2. Translate and run the code in one command: ```python urdu_python.py```
