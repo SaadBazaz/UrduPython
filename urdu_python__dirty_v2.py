@@ -27,7 +27,7 @@ language_dict = {
     "حق":         "True",
     "باطل":       "False",
     "ہے":         "is",
-    "طبقه":       "class",
+    "طبقہ":       "class",
     "وضح":        "def",
     "ابتدا":      "init",
     "خود":        "self",
@@ -47,6 +47,7 @@ words = ur_pyfile.read()
 
 for key, value in language_dict.items():
     words = words.replace(key, value)
+    words = re.sub(p, subst, words)
 
 eng_pyfile = open("eng.py", "wt")
 n = eng_pyfile.write(words)
