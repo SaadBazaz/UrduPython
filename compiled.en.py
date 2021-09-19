@@ -1,10 +1,9 @@
-chyzyN = ["ا", "ب", "پ"]
+‫کچھ= 2‬
 
-for chyz in chyzyN:
-	print(chyz)
+‫if کچھ == 1:‬
+‫	print("سلام")‬
+‫else:‬
+‫	print("دنیا")‬
 
-hndsh = 0
-
-while hndsh != 10:
-	print("تکرار #",  hndsh)
-	hndsh+= 1
+‫ہندسہ =  120‬
+‫print(ہندسہ - int("۱۰۰۰"))‬

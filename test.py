@@ -1,8 +1,11 @@
 def my_func():
     print ("lol")
 
+from unidecode import unidecode
 
-
+print ("unidecode('1000') ->", unidecode("1000"))
+print ("unidecode('abcd') ->", unidecode("abcd"))
+print ("unidecode('א') ->", unidecode("א"))
 
 print ("type(my_func) ->", type(my_func))
 print ("callable(my_func) ->", callable(my_func))
