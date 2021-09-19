@@ -48,6 +48,7 @@ The mappings are as following:
     "ندارد":      "None",
 ```
 Don't worry if you can't find a mapping, you can also use English Python!
+
 3. Open a Terminal in the folder of this file.
 4. Run the code in one command: ```python urdu_python__ply.py <NAME_OF_YOUR_FILE>```
 
