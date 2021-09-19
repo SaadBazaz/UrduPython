@@ -145,48 +145,52 @@ def t_NUMBER(t):
 
 
 
-reserved = {
-    # "۱":          "1",
-    # "۲":          "2",
-    # "۳":          "3",
-    # "۴":          "4",
-    # "۵":          "5",
-    # "۶":          "6",
-    # "۷":          "7",
-    # "۸":          "8",
-    # "۹":          "9",
-    # "۰":          "0",
-    "چھاپ":       "print",
-    "ورنہ اگر":   "elif",
-    "اگر":        "if",
-    "ورنہ":       "else",
-    "جبتک":       "while",
-    "جو":         "for",
-    "اندر":       "in", 
-    "داخلہ":      "input",
-    "توڑ":        "break",
-    "جاری":       "continue",
-    "گزر":        "pass",
-    "حق":         "True",
-    "باطل":       "False",
-    "ہے":         "is",
-    "طبقہ":       "class",
-    "وضح":        "def",
-    "__ابتدا__":  "__init__",
-    "خود":        "self",
-    "واپس":       "return",
-    "ستلی":       "string",
-    "ستل":        "str",
-    "شامل":       "append",
-    "نکل":        "pop",
-    "اور":        "and",
-    "یا":         "or",    
-    "سب":         "all",
-    "کوئ":        "any",
-    "ندارد":      "None",
-    "عدد":        "int",    
-}    
+# reserved = {
+#     # "۱":          "1",
+#     # "۲":          "2",
+#     # "۳":          "3",
+#     # "۴":          "4",
+#     # "۵":          "5",
+#     # "۶":          "6",
+#     # "۷":          "7",
+#     # "۸":          "8",
+#     # "۹":          "9",
+#     # "۰":          "0",
+#     "چھاپ":       "print",
+#     "ورنہ اگر":   "elif",
+#     "اگر":        "if",
+#     "ورنہ":       "else",
+#     "جبتک":       "while",
+#     "جو":         "for",
+#     "اندر":       "in", 
+#     "داخلہ":      "input",
+#     "توڑ":        "break",
+#     "جاری":       "continue",
+#     "گزر":        "pass",
+#     "حق":         "True",
+#     "باطل":       "False",
+#     "ہے":         "is",
+#     "طبقہ":       "class",
+#     "وضح":        "def",
+#     "__ابتدا__":  "__init__",
+#     "خود":        "self",
+#     "واپس":       "return",
+#     "ستلی":       "string",
+#     "ستل":        "str",
+#     "شامل":       "append",
+#     "نکل":        "pop",
+#     "اور":        "and",
+#     "یا":         "or",    
+#     "سب":         "all",
+#     "کوئ":        "any",
+#     "ندارد":      "None",
+#     "عدد":        "int",    
+# }    
 
+import yaml
+language_dict = yaml.load(open("./ur_native.lang.yaml"), Loader=yaml.SafeLoader)
+
+reserved = language_dict.get("reserved")
 
 # List of token names.   This is always required
 tokens =  [
@@ -229,7 +233,11 @@ def t_newline(t):
 
 def t_ID(t):
     # r'[a-zA-Z_][a-zA-Z_0-9]*'
-    r'[ا-ی_][۰-۹_ا-ی]*'
+    # r'[ا-ی_][۰-۹_ا-ی]*'
+
+    ## Docstring is assigned AFTER the function, because it has variables in the regex...
+    ## Reference: https://stackoverflow.com/questions/12217816/regex-with-variable-data-in-it-ply-lex
+
     t.type = reserved.get(t.value,'ID')    # Check for reserved words    
     
     # ------------- Debugging ---------------
@@ -241,6 +249,9 @@ def t_ID(t):
             t.value = unidecode(t.value)
 
     return t
+
+t_ID.__doc__ = r'['+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+'_]['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+'_'+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+']*'
+
 
 # A string containing ignored characters (spaces and tabs)
 # t_ignore  = ' \t'

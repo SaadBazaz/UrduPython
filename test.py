@@ -3,6 +3,11 @@ def my_func():
 
 from unidecode import unidecode
 
+import yaml
+
+loaded_dict = yaml.load(open("./ur_native.yaml"))
+print (loaded_dict)
+
 print ("unidecode('1000') ->", unidecode("1000"))
 print ("unidecode('abcd') ->", unidecode("abcd"))
 print ("unidecode('א') ->", unidecode("א"))
