@@ -2,7 +2,8 @@
 Write simple Python in Urdu.
 
 ## How to Use
-1. Write Urdu code in ```سامپل۔پے```
+1. Create a new file in a folder.
+2. Write some Urdu code in this new file.
 The mappings are as following:
 ```
     "۔":          ".",
@@ -46,8 +47,21 @@ The mappings are as following:
     "کوئ":        "any",
     "ندارد":      "None",
 ```
+Find the whole list at ```./languages/ur/ur_native.lang.yaml```. Don't worry if you can't find a mapping, you can also use English Python!
 
-2. Translate and run the code in one command: ```python urdu_python.py```
+An example of a Hello World Program:
+```
+print ("Hello world!")
+```
+would be
+```
+چھاپ ("Hello world!")
+```
+
+3. Open a Terminal in the folder of this file.
+4. Run the code in one command: ```python urdu_python__ply.py <NAME_OF_YOUR_FILE>```
+
+For more help, run ```python urdu_python__ply.py --help```. For better understanding, do run the sample code files in the "samples" folder.
 
 ## Guide
 ### For macOS
@@ -55,3 +69,7 @@ Use TextEdit (default text editor) to write Urdu code. Activate right-to-left ty
 
 ### For Linux/Windows
 Download and install Notepad++. Right click and activate RTL (Right-to-left).
+
+## Tests
+### Platform(s) tested on
+macOS Big Sur 11.1

@@ -1,61 +1,45 @@
-ur_pyfile = open("سامپل۔پے")
+# ------------------------------------------------------------
+# urdu_python.py
+#
+# Main driver file. 
+# - Arguments are captured here
+# - The parsing mode is called from here with the same args as this file
+# ------------------------------------------------------------
 
-language_dict = {
-    "۔":          ".",
-    "،":          ",",
-    "۱":          "1",
-    "۲":          "2",
-    "۳":          "3",
-    "۴":          "4",
-    "۵":          "5",
-    "۶":          "6",
-    "۷":          "7",
-    "۸":          "8",
-    "۹":          "9",
-    "۰":          "0",
-    "چھاپ":       "print",
-    "ورنہ اگر":   "elif",
-    "اگر":        "if",
-    "ورنہ":       "else",
-    "جبتک":       "while",
-    "جو":         "for",
-    "اندر":       "in", 
-    "داخلہ":      "input",
-    "توڑ":        "break",
-    "جاری":       "continue",
-    "گزر":        "pass",
-    "حق":         "True",
-    "باطل":       "False",
-    "ہے":         "is",
-    "طبقه":       "class",
-    "وضح":        "def",
-    "ابتدا":      "init",
-    "خود":        "self",
-    "واپس":       "return",
-    "ستلی":       "string",
-    "ستل":        "str",
-    "شامل":       "append",
-    "نکل":        "pop",
-    "اور":        "and",
-    "یا":         "or",    
-    "سب":         "all",
-    "کوئ":        "any",
-    "ندارد":      "None",    
-}
 
-words = ur_pyfile.read()
+import argparse
 
-for key, value in language_dict.items():
-    words = words.replace(key, value)
+# construct the argument parser and parse the argument
+ap = argparse.ArgumentParser()
+ap.add_argument('file', metavar='F', type=str, nargs='+',
+                    help='File to compile.')
+ap.add_argument("-t", "--translate", 
+                    action='store_true',
+                    default=False, required = False, 
+                    help = "Translate variables and functions to English, using the unicode.")
+ap.add_argument("-m", "--mode",
+                    default="lex", required = False, 
+                    help = "The mode to use to translate the code.")
+ap.add_argument("-d", "--dictionary",
+                    default="./languages/ur/ur_native.lang.yaml", required = False, 
+                    help = "The dictionary to use to translate the code.")
 
-eng_pyfile = open("eng.py", "wt")
-n = eng_pyfile.write(words)
-eng_pyfile.close()
 
-import eng
 
-import os
-if os.path.exists("eng.py"):
-  os.remove("eng.py")
-else:
-  print("The file does not exist")
+group = ap.add_mutually_exclusive_group(required=False)
+
+group.add_argument("-k", "--keep", 
+                    action='store_true',
+                    default=False, required = False, 
+                    help = "Save the compiled file to the specified location.")
+group.add_argument("-ko", "--keep-only", 
+                    action='store_true',
+                    default=False, required = False, 
+                    help = "Save the compiled file to the specified location, but don't run the file.")
+
+args = vars(ap.parse_args())
+
+import importlib
+
+mod = importlib.import_module("src."+args["mode"])
+mod.run(args)
