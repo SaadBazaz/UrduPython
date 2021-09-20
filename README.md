@@ -3,7 +3,7 @@ Write simple Python in Urdu.
 
 ## How to Use
 1. Create a new file in a folder.
-2. Write some Urdu code in the above file.
+2. Write some Urdu code in this new file.
 The mappings are as following:
 ```
     "۔":          ".",
@@ -48,6 +48,15 @@ The mappings are as following:
     "ندارد":      "None",
 ```
 Don't worry if you can't find a mapping, you can also use English Python!
+
+For example:
+```
+print ("hello world")
+```
+would be
+```
+چھاپ ("hello world")
+```
 
 3. Open a Terminal in the folder of this file.
 4. Run the code in one command: ```python urdu_python__ply.py <NAME_OF_YOUR_FILE>```
