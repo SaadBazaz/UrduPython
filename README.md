@@ -47,15 +47,15 @@ The mappings are as following:
     "کوئ":        "any",
     "ندارد":      "None",
 ```
-Don't worry if you can't find a mapping, you can also use English Python!
+Find the whole list at ```./languages/ur/ur_native.lang.yaml```. Don't worry if you can't find a mapping, you can also use English Python!
 
-For example:
+An example of a Hello World Program:
 ```
-print ("hello world")
+print ("Hello world!")
 ```
 would be
 ```
-چھاپ ("hello world")
+چھاپ ("Hello world!")
 ```
 
 3. Open a Terminal in the folder of this file.

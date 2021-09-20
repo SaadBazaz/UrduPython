@@ -3,7 +3,7 @@ def run (args):
   ur_pyfile = open(args["file"][0])
 
   import yaml
-  language_dict = yaml.load(open("./ur_native.lang.yaml"), Loader=yaml.SafeLoader)
+  language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
 
   reserved = language_dict.get("reserved")
 

@@ -20,6 +20,10 @@ ap.add_argument("-t", "--translate",
 ap.add_argument("-m", "--mode",
                     default="lex", required = False, 
                     help = "The mode to use to translate the code.")
+ap.add_argument("-d", "--dictionary",
+                    default="./languages/ur/ur_native.lang.yaml", required = False, 
+                    help = "The dictionary to use to translate the code.")
+
 
 
 group = ap.add_mutually_exclusive_group(required=False)
