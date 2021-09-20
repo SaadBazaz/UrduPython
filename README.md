@@ -8,7 +8,7 @@ Write simple Python in Urdu.
 ## How to Install
 1. Download your preferred version of the [Python programming language](https://www.python.org/downloads/).
 2. Download this repo as a ZIP, or clone it via Git.
-3. Open the repo's folder through your file system.
+3. Open the repo's folder in your Terminal.
 4. Run ```pip install requirements.txt```
 
 ## How to Use
