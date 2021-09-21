@@ -16,47 +16,49 @@ Write simple Python in Urdu.
 2. Write some Urdu code in this new file.
 The mappings are as following:
 ```
-    "۔":          ".",
-    "،":          ",",
-    "۱":          "1",
-    "۲":          "2",
-    "۳":          "3",
-    "۴":          "4",
-    "۵":          "5",
-    "۶":          "6",
-    "۷":          "7",
-    "۸":          "8",
-    "۹":          "9",
-    "۰":          "0",
-    "چھاپ":       "print",
-    "ورنہاگر":   "elif",
-    "اگر":        "if",
-    "ورنہ":       "else",
-    "جبتک":       "while",
-    "جو":         "for",
-    "اندر":       "in", 
-    "داخله":      "input",
-    "توڑ":        "break",
-    "جاری":       "continue",
-    "گزر":        "pass",
-    "حق":         "True",
-    "باطل":       "False",
-    "ہے":         "is",
-    "طبقه":       "class",
-    "وضح":        "def",
-    "ابتدا":      "init",
-    "خود":        "self",
-    "واپس":       "return",
-    "ستلی":       "string",
-    "ستل":        "str",
-    "شامل":       "append",
-    "نکل":        "pop",
-    "اور":        "and",
-    "یا":         "or",    
-    "سب":         "all",
-    "کوئ":        "any",
-    "ندارد":      "None",
-```
+| Python (original)   | 🇵🇰 Ur |
+| -------------       | ------------- |
+|    ,                 |       ،|
+|    .                 |       ۔|
+|    2                 |       ۲|
+|    1                 |       ۱|
+|    3                 |       ۳|
+|    4                 |       ۴|
+|    5                 |       ۵|
+|    6                 |       ۶|
+|    7                 |       ۷|
+|    8                 |       ۸|
+|    9                 |       ۹|
+|    0                 |       ۰|
+|    print             |       چھاپ|
+|    elif              |       ورنہاگر|
+|    if                |       اگر|
+|    else              |       ورنہ|
+|    while             |       جبتک|
+|    for               |       جو|
+|    in,               |       اندر|
+|    input             |       داخله|
+|    break             |       توڑ|
+|    continue          |       جاری|
+|    pass              |       گزر|
+|    True              |       حق|
+|    False             |       باطل|
+|    is                |       ہے|
+|    class             |       طبقه|
+|    def               |       وضح|
+|    init              |       ابتدا|
+|    self              |       خود|
+|    return            |       واپس|
+|    string            |       ستلی|
+|    str               |   ستل|
+|    append                |   شامل|
+|    pop               |   نکل|
+|    and               |   اور|
+|    or,                   |   یا|
+|    all               |   سب|
+|    any               |   کوئ|
+|    None              |   ندارد
+```|
 Find the whole list at ```./languages/ur/ur_native.lang.yaml```. Don't worry if you can't find a mapping, you can also use English Python!
 
 An example of a Hello World Program:
