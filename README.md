@@ -29,7 +29,7 @@ The mappings are as following:
     "۹":          "9",
     "۰":          "0",
     "چھاپ":       "print",
-    "ورنہ اگر":   "elif",
+    "ورنہاگر":   "elif",
     "اگر":        "if",
     "ورنہ":       "else",
     "جبتک":       "while",
