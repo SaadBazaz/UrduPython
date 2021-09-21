@@ -4,4 +4,4 @@
 __pycache__
 .DS_Store
 
-./compiled.en.py
+compiled.en.py
