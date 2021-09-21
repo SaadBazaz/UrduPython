@@ -180,6 +180,7 @@ def run(args):
         'ID',
 
         'newline',
+        'COMMENT',
         # 'tab',
 
     ] + list(reserved.values())
@@ -253,6 +254,16 @@ def run(args):
 
         # ------------- Debugging ---------------
         # print ("Found a string!", t.value)
+        # ------------- Debugging ---------------
+
+        return t
+
+    # Comments rule
+    def t_COMMENT(t):
+        r'\#.*\n'
+
+        # ------------- Debugging ---------------
+        # print ("Found a comment!", t.value)
         # ------------- Debugging ---------------
 
         return t
