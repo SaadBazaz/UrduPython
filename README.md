@@ -15,28 +15,16 @@ Write simple Python in Urdu.
 1. Create a new file in a folder.
 2. Write some Urdu code in this new file.
 The mappings are as following:
-```
-| Python (original)   | 🇵🇰 Ur |
+
+| Python (original)   | 🇵🇰 Ur          |
 | -------------       | ------------- |
-|    ,                 |       ،|
-|    .                 |       ۔|
-|    2                 |       ۲|
-|    1                 |       ۱|
-|    3                 |       ۳|
-|    4                 |       ۴|
-|    5                 |       ۵|
-|    6                 |       ۶|
-|    7                 |       ۷|
-|    8                 |       ۸|
-|    9                 |       ۹|
-|    0                 |       ۰|
 |    print             |       چھاپ|
-|    elif              |       ورنہاگر|
 |    if                |       اگر|
+|    elif              |       ورنہاگر|
 |    else              |       ورنہ|
 |    while             |       جبتک|
 |    for               |       جو|
-|    in,               |       اندر|
+|    in               |       اندر|
 |    input             |       داخله|
 |    break             |       توڑ|
 |    continue          |       جاری|
@@ -58,8 +46,20 @@ The mappings are as following:
 |    all               |   سب|
 |    any               |   کوئ|
 |    None              |   ندارد
-```|
-Find the whole list at ```./languages/ur/ur_native.lang.yaml```. Don't worry if you can't find a mapping, you can also use English Python!
+|    ,                |       ،       |
+|    .                |       ۔|
+|    0                 |       ۰|
+|    1                 |       ۱|
+|    2                 |       ۲|
+|    3                 |       ۳|
+|    4                 |       ۴|
+|    5                 |       ۵|
+|    6                 |       ۶|
+|    7                 |       ۷|
+|    8                 |       ۸|
+|    9                 |       ۹|
+
+Find the whole list at ```languages/ur/ur_native.lang.yaml```. Don't worry if you can't find a mapping, you can also use English Python!
 
 An example of a Hello World Program:
 ```
