@@ -1,6 +1,15 @@
 # UrduPython
 Write simple Python in Urdu.
 
+## Pre-requisites
+- Python 3+
+- Pip
+
+## How to Install
+1. Download this repo as a ZIP, or clone it via Git.
+2. Open the repo's folder in your Terminal.
+3. Run ```pip install requirements.txt```
+
 ## How to Use
 1. Create a new file in a folder.
 2. Write some Urdu code in this new file.
