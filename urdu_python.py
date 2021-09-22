@@ -24,6 +24,10 @@ ap.add_argument("-d", "--dictionary",
                     default="./languages/ur/ur_native.lang.yaml", required = False, 
                     help = "The dictionary to use to translate the code.")
 
+ap.add_argument("-r", "--reverse",
+                    action='store_true',
+                    default=False, required = False, 
+                    help = "Translate English code to the language of your choice.")
 
 
 group = ap.add_mutually_exclusive_group(required=False)

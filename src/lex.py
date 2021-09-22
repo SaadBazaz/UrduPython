@@ -163,7 +163,18 @@ def run(args):
     import yaml
     language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
 
-    reserved = language_dict.get("reserved")
+    if args["reverse"]:
+        reserved = {value:key for key, value in language_dict.get("reserved").items()}
+        # ------------- Debugging ---------------
+        # print ("Reversed:", reserved)
+        # ------------- Debugging ---------------
+
+    else:
+        reserved = language_dict.get("reserved")
+        # ------------- Debugging ---------------
+        # print ("normal:", reserved)
+        # ------------- Debugging ---------------
+
 
     # List of token names.   This is always required
     tokens =  [
@@ -214,6 +225,8 @@ def run(args):
 
         t.type = reserved.get(t.value,'ID')    # Check for reserved words    
         
+
+
         # ------------- Debugging ---------------
         # print ("Type is:", t.type)
         # ------------- Debugging ---------------
@@ -225,7 +238,10 @@ def run(args):
 
         return t
 
-    t_ID.__doc__ = r'['+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+'_]['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+'_'+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+']*'
+    if args["reverse"]:
+        t_ID.__doc__ = r'[a-zA-Z_][a-zA-Z_0-9]*'
+    else:    
+        t_ID.__doc__ = r'['+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+'_]['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+'_'+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+']*'
 
 
     # A string containing ignored characters (spaces and tabs)
@@ -237,7 +253,7 @@ def run(args):
         # print("Illegal character '%s'" % t.value[0])
         # ------------- Debugging ---------------
 
-        t.value = t.value[0]
+        t.value = unidecode(t.value[0])
         t.lexer.skip(1)
 
         # ------------- Debugging ---------------
@@ -292,6 +308,10 @@ def run(args):
         "۔":          ".",
         "،":          ",",  
     }
+
+    if args["reverse"]:
+        dots_and_stuff = {value:key for key, value in dots_and_stuff.items()}
+        # print ("Reversed:", reserved)
 
     for key, value in dots_and_stuff.items():
         code = code.replace(key, value)
