@@ -7,6 +7,24 @@
 
 def run(args):
 
+
+    import yaml
+    language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
+
+    if args["reverse"]:
+        reserved = {value:key for key, value in language_dict.get("reserved").items()}
+        # ------------- Debugging ---------------
+        # print ("Reversed:", reserved)
+        # ------------- Debugging ---------------
+
+    else:
+        reserved = language_dict.get("reserved")
+        # ------------- Debugging ---------------
+        # print ("normal:", reserved)
+        # ------------- Debugging ---------------
+
+        
+
     # ------------- Debugging ---------------
     # print ("'a' in ASCII number is:", ord('a'))
     # print ("'ا' in ASCII number is:", ord('ا'))
@@ -102,13 +120,18 @@ def run(args):
 
     # A regular expression rule with some action code
     def t_NUMBER(t):
-        r'[۰-۹][۰-۹]*[۔]{0,1}[۰-۹]*'
-
         # ------------- Debugging ---------------
         # print ("The number was:", t.value)
         # ------------- Debugging ---------------
         
-        t.value = unidecode(t.value)
+
+        if args["reverse"]:
+            value_str = list(t.value)
+            for i in range(0, len(value_str)):
+                value_str[i] = reserved.get(value_str[i], value_str[i])
+            t.value = ''.join(value_str)
+        else:
+            t.value = unidecode(t.value)
         
         # ------------- Debugging ---------------
         # print ("The number is now:", t.value)
@@ -116,6 +139,13 @@ def run(args):
 
         return t
 
+        # r'[۰-۹][۰-۹]*[۔]{0,1}[۰-۹]*'
+    if args["reverse"]:
+        t_NUMBER.__doc__ = r'[0-9][0-9]*[۔]{0,1}[0-9]*'
+    else:    
+        t_NUMBER.__doc__ = r'['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+']['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+']*[۔]{0,1}['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+']*'
+
+    # r'['+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+'_]['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+'_'+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+']*'
 
 
     # reserved = {
@@ -159,21 +189,6 @@ def run(args):
     #     "ندارد":      "None",
     #     "عدد":        "int",    
     # }    
-
-    import yaml
-    language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
-
-    if args["reverse"]:
-        reserved = {value:key for key, value in language_dict.get("reserved").items()}
-        # ------------- Debugging ---------------
-        # print ("Reversed:", reserved)
-        # ------------- Debugging ---------------
-
-    else:
-        reserved = language_dict.get("reserved")
-        # ------------- Debugging ---------------
-        # print ("normal:", reserved)
-        # ------------- Debugging ---------------
 
 
     # List of token names.   This is always required
@@ -231,10 +246,17 @@ def run(args):
         # print ("Type is:", t.type)
         # ------------- Debugging ---------------
 
+        # ------------- Debugging ---------------
+        # print ("Value is:", t.value)
+        # ------------- Debugging ---------------
+
 
         if args['translate']:
             if t.type == 'ID':
                 t.value = unidecode(t.value)
+
+
+
 
         return t
 
@@ -339,13 +361,18 @@ def run(args):
         #print ("Tok's type is:", tok.type)
         # ------------- Debugging ---------------
 
+
+
         if tok.value in reserved.keys():
 
             # ------------- Debugging ---------------
             # if tok.type == '۔':
             #     print ("Found an Urdu dot!")
             # ------------- Debugging ---------------
-
+    
+            # if args["reverse"] and tok.type == 'NUMBER':
+            #     compiled_code += tok.value
+            # else:
             compiled_code += tok.type
         else:
             compiled_code += tok.value
