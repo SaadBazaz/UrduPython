@@ -240,7 +240,7 @@ def run(args):
 
         t.type = reserved.get(t.value,'ID')    # Check for reserved words    
         
-
+        print ("looking for error:", t.type, ", ", t.value)
 
         # ------------- Debugging ---------------
         # print ("Type is:", t.type)
@@ -272,13 +272,19 @@ def run(args):
     # Error handling rule
     def t_error(t):
         # ------------- Debugging ---------------
-        # print("Illegal character '%s'" % t.value[0])
+        print("Illegal character '%s'" % t.value[0])
         # ------------- Debugging ---------------
 
-        t.value = unidecode(t.value[0])
+        if args["reverse"] is False:
+            t.value = unidecode(t.value[0])
+        else:
+            t.value = t.value[0]
+
         t.lexer.skip(1)
 
+
         # ------------- Debugging ---------------
+        # print("Now becomes '%s'" % t.value[0])
         # print("still keeping it tho")
         # ------------- Debugging ---------------
 
@@ -331,12 +337,16 @@ def run(args):
         "،":          ",",  
     }
 
+    print ("normal:", dots_and_stuff)
+
     if args["reverse"]:
         dots_and_stuff = {value:key for key, value in dots_and_stuff.items()}
-        # print ("Reversed:", reserved)
+        print ("Reversed:", dots_and_stuff)
 
     for key, value in dots_and_stuff.items():
         code = code.replace(key, value)
+
+    print ("Code is,\n", code)
 
     lexer.input(code)
 
