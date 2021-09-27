@@ -18,7 +18,7 @@ The mappings are as following:
 
 | Python (original)   | 🇵🇰 Ur          |
 | -------------       | ------------- |
-|    ```print```             |       چھاپ|
+|    ```print```             |       لکھو|
 |    ```if```                |       اگر|
 |    ```elif```              |       ورنہاگر|
 |    ```else```              |       ورنہ|
@@ -67,7 +67,7 @@ print ("Hello world!")
 ```
 would be
 ```
-چھاپ ("Hello world!")
+لکھو ("Hello world!")
 ```
 
 3. Open a Terminal in the folder of this file.

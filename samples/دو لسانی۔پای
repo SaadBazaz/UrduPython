@@ -1,6 +1,6 @@
 
-import os
+‏import os
 
 راستہ = os.getcwd()
 
-چھاپ (راستہ)
+لکھو (راستہ)
