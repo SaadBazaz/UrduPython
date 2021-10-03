@@ -1,5 +1,6 @@
 # UrduPython
-Write simple Python in Urdu.
+> Ever had that random thought of programming in Urdu? Well, you're at the right place.
+Programming Language in Urdu, based on Python - اردو میں کوڈ لکھیں
 
 ## Pre-requisites
 - Python 3+
@@ -70,10 +71,10 @@ would be
 لکھو ("Hello world!")
 ```
 
-3. Open a Terminal in the folder of this file.
-4. Run the code in one command: ```python urdu_python__ply.py <NAME_OF_YOUR_FILE>```
+3. Open a Terminal in the UrduPython folder.
+4. Run the code in one command: ```python urdu_python.py path/to/the/file/you/created```
 
-For more help, run ```python urdu_python__ply.py --help```. For better understanding, do run the sample code files in the "samples" folder.
+For more help, run ```python urdu_python.py --help```. For better understanding, do run the sample code files in the "samples" folder.
 
 ## Guide
 ### For macOS
