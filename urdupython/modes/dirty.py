@@ -1,14 +1,13 @@
 
-def run (args):
-  ur_pyfile = open(args["file"][0])
-
+def run (args, code):
+    
   import yaml
   language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
 
   reserved = language_dict.get("reserved")
 
-  compiled_code = ur_pyfile.read()
-
+  compiled_code = code
+#   compiled_code = ur_pyfile.read()
 
   if args["keep_only"]:
       print ("Compiling", args["file"][0], "...")

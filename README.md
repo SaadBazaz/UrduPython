@@ -11,7 +11,7 @@ Programming Language in Urdu, based on Python - اردو میں کوڈ لکھی�
 ## How to Install
 1. Download this repo as a ZIP, or clone it via Git.
 2. Open the repo's folder in your Terminal.
-3. Run ```pip install -r requirements.txt```
+3. Run ```pip install -e .```
 
 ## How to Use
 1. Create a new file in a folder.
@@ -72,10 +72,10 @@ would be
 لکھو ("Hello world!")
 ```
 
-3. Open a Terminal in the UrduPython folder.
-4. Run the code in one command: ```python urdu_python.py path/to/the/file/you/created```
+3. Open a Terminal in the folder of this file.
+4. Run the code in one command: ```urdupython <NAME_OF_YOUR_FILE>```
 
-For more help, run ```python urdu_python.py --help```. For better understanding, do run the sample code files in the "samples" folder.
+For more help, run ```urdupython --help```. For better understanding, do run the sample code files in the "samples" folder.
 
 ## Guide
 ### For macOS
@@ -87,3 +87,4 @@ Download and install Notepad++. Right click and activate RTL (Right-to-left).
 ## Tests
 ### Platform(s) tested on
 macOS Big Sur 11.1
+Termux (Android)

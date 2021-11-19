@@ -5,8 +5,7 @@
 # ------------------------------------------------------------
 
 
-def run(args):
-
+def run(args, code):
 
     import yaml
     language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
@@ -131,7 +130,7 @@ def run(args):
                 value_str[i] = reserved.get(value_str[i], value_str[i])
             t.value = ''.join(value_str)
         else:
-            import src.filters.unidecoder as num_filter
+            import urdupython.filters.unidecoder as num_filter
             t.value = num_filter.filter(t.value)
         
         # ------------- Debugging ---------------
@@ -331,9 +330,9 @@ def run(args):
     # ------------- Debugging ---------------
 
 
-    ur_pyfile = open(args["file"][0])
+    # ur_pyfile = open(args["file"][0])
         
-    code = ur_pyfile.read()
+    # code = ur_pyfile.read()
 
     dots_and_stuff = {
         "۔":          ".",
@@ -396,10 +395,14 @@ def run(args):
         else:
             compiled_code += tok.value
 
+
     if args["keep"] or args["keep_only"]:
         eng_pyfile.write(compiled_code)
         eng_pyfile.close()
 
-    if args["keep_only"] is False:
-        exec(compiled_code)
 
+    if args["return"] is True:
+        return compiled_code
+
+    elif args["keep_only"] is False:
+        exec(compiled_code)
