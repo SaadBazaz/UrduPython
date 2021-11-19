@@ -1,5 +1,7 @@
 # UrduPython
-Write simple Python in Urdu.
+> Ever had that random thought of programming in Urdu? Well, you're at the right place.
+
+Programming Language in Urdu, based on Python - اردو میں کوڈ لکھیں
 
 ## Pre-requisites
 - Python 3+
