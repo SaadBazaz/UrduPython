@@ -24,7 +24,7 @@ def run_module(
             'return': True,
         }, 
     ):
-    mod = importlib.import_module("urdupython.modes."+mode)
+    mod = importlib.import_module(".modes."+mode, package='urdupython')
     return mod.run(args, code)
 
 def main():
@@ -44,7 +44,7 @@ def main():
                         default="lex", required = False, 
                         help = "The mode to use to translate the code.")
     ap.add_argument("-d", "--dictionary",
-                        default="./languages/ur/ur_native.lang.yaml", required = False, 
+                        default=os.path.join(SCRIPTDIR, 'languages/ur/ur_native.lang.yaml'), required = False, 
                         help = "The dictionary to use to translate the code.")
 
     ap.add_argument("-r", "--reverse",

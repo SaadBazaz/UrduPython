@@ -9,6 +9,13 @@ Programming Language in Urdu, based on Python - اردو میں کوڈ لکھی�
 - (optional but recommended) Virtual environment, like ```conda``` or ```virtualenv```
 
 ## How to Install
+### Pip
+If you've installed ```pip```, you can download UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
+```
+pip install -i https://test.pypi.org/simple/ urdupython
+```
+
+### Source
 1. Download this repo as a ZIP, or clone it via Git.
 2. Open the repo's folder in your Terminal.
 3. Run ```pip install -e .```
