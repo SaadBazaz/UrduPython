@@ -24,7 +24,7 @@ def run_module(
             'return': True,
         }, 
     ):
-    mod = importlib.import_module("urdupython.modes."+mode)
+    mod = importlib.import_module("modes."+mode)
     return mod.run(args, code)
 
 def main():
