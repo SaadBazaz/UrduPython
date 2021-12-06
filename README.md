@@ -12,7 +12,7 @@ Programming Language in Urdu, based on Python - اردو میں کوڈ لکھی�
 ### Pip
 If you've installed ```pip```, you can download UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
 ```
-pip install -i https://test.pypi.org/simple/  --extra-index-url https://pypi.org/simple urdupython
+pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple  urdupython
 ```
 
 ### Source
