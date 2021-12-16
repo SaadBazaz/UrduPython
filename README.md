@@ -10,7 +10,7 @@ Programming Language in Urdu, based on Python - اردو میں کوڈ لکھی�
 
 ## How to Install
 ### Pip
-If you've installed ```pip```, you can download UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
+If you've installed ```pip```, you can install UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
 ```
 pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple  urdupython
 ```
@@ -88,10 +88,14 @@ For more help, run ```urdupython --help```. For better understanding, do run the
 ### For macOS
 Use TextEdit (default text editor) to write Urdu code. Activate right-to-left typing through Menu: Format->Text->Writing Direction->Right-to-Left
 
-### For Linux/Windows
+### For Windows
 Download and install Notepad++. Right click and activate RTL (Right-to-left).
+
+### For Linux
+Open gEdit (or any similar text-editing program), and start coding right away.
 
 ## Tests
 ### Platform(s) tested on
-macOS Big Sur 11.1
-Termux (Android)
+- macOS Big Sur 11.1
+- Termux (Android)
+- Ubuntu 20.04.3 LTS
