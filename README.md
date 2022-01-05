@@ -1,15 +1,33 @@
 # UrduPython
-Write simple Python in Urdu.
+> Ever had that random thought of programming in Urdu? Well, you're at the right place.
+
+Programming Language in Urdu, based on Python - اردو میں کوڈ لکھیں
 
 ## Pre-requisites
 - Python 3+
 - Pip
 - (optional but recommended) Virtual environment, like ```conda``` or ```virtualenv```
 
+## Why?
+Just look at how beautiful it is :)
+
+### Side by Side Comparison of UrduPython vs Python
+![Side by side comparison of UrduPython vs Python](./images/side-by-side-loop-code.png)
+
+### It works!
+![Running UrduPython code](./images/urdupython-loop-running-example.png)
+
 ## How to Install
+### Pip
+If you've installed ```pip```, you can install UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
+```
+pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple  urdupython
+```
+
+### Source
 1. Download this repo as a ZIP, or clone it via Git.
 2. Open the repo's folder in your Terminal.
-3. Run ```pip install -r requirements.txt```
+3. Run ```pip install -e .```
 
 ## How to Use
 1. Create a new file in a folder.
@@ -59,7 +77,7 @@ The mappings are as following:
 |    ```8```                 |       ۸|
 |    ```9```                 |       ۹|
 
-Find the whole list at ```languages/ur/ur_native.lang.yaml```. Don't worry if you can't find a mapping, you can also use English Python!
+Find the whole list of keywords [here](./urdupython/languages/ur/ur_native.lang.yaml). Don't worry if you can't find a mapping, you can also use English Python!
 
 An example of a Hello World Program:
 ```
@@ -69,19 +87,25 @@ would be
 ```
 لکھو ("Hello world!")
 ```
+There are many more sample codes available [here](./urdupython/samples)
 
 3. Open a Terminal in the folder of this file.
-4. Run the code in one command: ```python urdu_python__ply.py <NAME_OF_YOUR_FILE>```
+4. Run the code in one command: ```urdupython <NAME_OF_YOUR_FILE>```
 
-For more help, run ```python urdu_python__ply.py --help```. For better understanding, do run the sample code files in the "samples" folder.
+For more help, run ```urdupython --help```. For better understanding, do run the sample code files in the "samples" folder.
 
 ## Guide
 ### For macOS
 Use TextEdit (default text editor) to write Urdu code. Activate right-to-left typing through Menu: Format->Text->Writing Direction->Right-to-Left
 
-### For Linux/Windows
+### For Windows
 Download and install Notepad++. Right click and activate RTL (Right-to-left).
+
+### For Linux
+Open gEdit (or any similar text-editing program), and start coding right away.
 
 ## Tests
 ### Platform(s) tested on
-macOS Big Sur 11.1
+- macOS Big Sur 11.1
+- Termux (Android)
+- Ubuntu 20.04.3 LTS
