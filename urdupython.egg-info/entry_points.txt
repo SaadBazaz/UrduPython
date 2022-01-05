@@ -1,5 +1,0 @@
-[console_scripts]
-urdupython = urdupython.urdu_python:main
-اردوپای = urdupython.urdu_python:main
-اردوپایتھان = urdupython.urdu_python:main
-

@@ -1,7 +1,5 @@
 # UrduPython
-> Ever had that random thought of programming in Urdu? Well, you're at the right place.
-
-Programming Language in Urdu, based on Python - اردو میں کوڈ لکھیں
+Write simple Python in Urdu.
 
 ## Pre-requisites
 - Python 3+
@@ -9,16 +7,9 @@ Programming Language in Urdu, based on Python - اردو میں کوڈ لکھی�
 - (optional but recommended) Virtual environment, like ```conda``` or ```virtualenv```
 
 ## How to Install
-### Pip
-If you've installed ```pip```, you can install UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
-```
-pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple  urdupython
-```
-
-### Source
 1. Download this repo as a ZIP, or clone it via Git.
 2. Open the repo's folder in your Terminal.
-3. Run ```pip install -e .```
+3. Run ```pip install -r requirements.txt```
 
 ## How to Use
 1. Create a new file in a folder.
@@ -32,7 +23,7 @@ The mappings are as following:
 |    ```elif```              |       ورنہاگر|
 |    ```else```              |       ورنہ|
 |    ```while```             |       جبتک|
-|    ```for```               |       جو|
+|    ```for```               |       ہر|
 |    ```in```               |       اندر|
 |    ```input```             |       داخله|
 |    ```break```             |       توڑ|
@@ -78,25 +69,19 @@ would be
 ```
 لکھو ("Hello world!")
 ```
-There are many more sample codes available [here](./urdupython/samples)
 
 3. Open a Terminal in the folder of this file.
-4. Run the code in one command: ```urdupython <NAME_OF_YOUR_FILE>```
+4. Run the code in one command: ```python urdu_python__ply.py <NAME_OF_YOUR_FILE>```
 
-For more help, run ```urdupython --help```. For better understanding, do run the sample code files in the "samples" folder.
+For more help, run ```python urdu_python__ply.py --help```. For better understanding, do run the sample code files in the "samples" folder.
 
 ## Guide
 ### For macOS
 Use TextEdit (default text editor) to write Urdu code. Activate right-to-left typing through Menu: Format->Text->Writing Direction->Right-to-Left
 
-### For Windows
+### For Linux/Windows
 Download and install Notepad++. Right click and activate RTL (Right-to-left).
-
-### For Linux
-Open gEdit (or any similar text-editing program), and start coding right away.
 
 ## Tests
 ### Platform(s) tested on
-- macOS Big Sur 11.1
-- Termux (Android)
-- Ubuntu 20.04.3 LTS
+macOS Big Sur 11.1
