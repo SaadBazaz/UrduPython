@@ -78,6 +78,7 @@ would be
 ```
 لکھو ("Hello world!")
 ```
+There are many more sample codes available [here](./urdupython/samples)
 
 3. Open a Terminal in the folder of this file.
 4. Run the code in one command: ```urdupython <NAME_OF_YOUR_FILE>```
