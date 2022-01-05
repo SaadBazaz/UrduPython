@@ -23,7 +23,7 @@ The mappings are as following:
 |    ```elif```              |       ورنہاگر|
 |    ```else```              |       ورنہ|
 |    ```while```             |       جبتک|
-|    ```for```               |       ہر|
+|    ```for```               |       جو|
 |    ```in```               |       اندر|
 |    ```input```             |       داخله|
 |    ```break```             |       توڑ|
