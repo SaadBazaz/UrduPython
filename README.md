@@ -96,10 +96,12 @@ For more help, run ```urdupython --help```. For better understanding, do run the
 
 ## Guide
 ### For macOS
-Use TextEdit (default text editor) to write Urdu code. Activate right-to-left typing through Menu: Format->Text->Writing Direction->Right-to-Left
+- Use TextEdit (default text editor) to write Urdu code. 
+- Activate right-to-left typing through Menu: Format->Text->Writing Direction->Right-to-Left
 
 ### For Windows
-Download and install Notepad++. Right click and activate RTL (Right-to-left).
+- Download and install Notepad++. 
+- Right click and activate RTL (Right-to-left).
 
 ### For Linux
 Open gEdit (or any similar text-editing program), and start coding right away.
