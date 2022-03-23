@@ -17,7 +17,7 @@ def run_module(
         code,
         args={
             'translate': False,
-            'dictionary': os.path.join(SCRIPTDIR, 'languages/ur/ur_native.lang.yaml'),
+            'dictionary': os.path.join(SCRIPTDIR, 'languages/ur/ur_native_3.lang.yaml'),
             'reverse': False,
             'keep': False,         
             'keep_only': False,

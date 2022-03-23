@@ -240,6 +240,8 @@ def run(args, code):
 
         t.type = reserved.get(t.value,'ID')    # Check for reserved words    
         
+        # if ttt
+
         # ------------- Debugging ---------------
         # print ("looking for error:", t.type, ", ", t.value)
         # ------------- Debugging ---------------
