@@ -8,7 +8,8 @@
 def run(args, code):
 
     import yaml
-    language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
+    with open(args["dictionary"], encoding="utf-8") as lngfile:
+        language_dict = yaml.load(lngfile, Loader=yaml.SafeLoader)
 
     if args["reverse"]:
         reserved = {value:key for key, value in language_dict.get("reserved").items()}

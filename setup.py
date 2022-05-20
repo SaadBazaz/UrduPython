@@ -6,13 +6,16 @@ from setuptools import setup, find_packages
 
 files = ["samples/*/*", "languages/*/*.yaml"]
 
-
 with open('requirements.txt') as f:
-    required = f.read().splitlines()
-
+    required_versions = f.read().splitlines()
+    required = []
+    for required_package in required_versions:
+        print ("Package:", required_package.split("==")[0])
+        required.append(required_package.split("==")[0])
+        
 setup(
     name='urdupython',
-    version='0.0.9',
+    version='0.1.3',
     author='Saad Bazaz',
     author_email='saadbazaz@hotmail.com',
     url='https://github.com/saadbazaz/UrduPython',

@@ -74,7 +74,7 @@ def main():
 
     args = vars(ap.parse_args())
 
-    code_pyfile = open(args["file"][0])
+    code_pyfile = open(args["file"][0], encoding="utf8")
     code = code_pyfile.read()
     mode = args["mode"]
 
