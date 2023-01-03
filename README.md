@@ -1,3 +1,5 @@
+> :warning: **Development has shifted to [UniversalPython](https://github.com/UniversalPython/UniversalPython)**, we recommend using it as it has Urdu support built-in. Use this for learning purposes if you wish.
+
 # UrduPython
 > Ever had that random thought of programming in Urdu? Well, you're at the right place.
 
